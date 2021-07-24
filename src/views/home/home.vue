@@ -2,7 +2,7 @@
   <div id='home'>
     <!-- 这个是头部导航栏的组件， -->
       <Navbar id="navbar"><div slot='center'>购物街</div></Navbar>
-      <tabcontrol :titles="['流行','新品','精选']" @tabclick="tabclick" v-show="istabfixed" ref="tabcontrol1"/>
+      <tabcontrol id="tabcontrol" :titles="['流行','新品','精选']" @tabclick="tabclick" v-show="istabfixed" ref="tabcontrol1"/>
       <!-- ref是为了后面获取到该组件， -->
       <!-- :propType="3"是为了传一个参数给子组件， -->
       <!-- @scroll=“backtopshow”是监听bscroll里面发送出来的事件 -->
@@ -204,4 +204,8 @@ export default {
   box-shadow: 0px 1px 1px rgba(0,0,0,0.5);
 }
 .homerecommonviews{background-color: #fff;}
+#tabcontrol{
+  position:sticky;
+  top: 44px;
+}
 </style>
